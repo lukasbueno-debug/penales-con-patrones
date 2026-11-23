@@ -68,6 +68,11 @@ function responder(posicion) {
 
   document.querySelector("#goles").textContent = goles;
   siguiente.hidden = indice === tiros.length - 1;
+    if (siguiente.hidden) {
+    document.querySelector("#puntaje-final").textContent =
+      `Acertaste ${goles} de ${tiros.length} tiros.`;
+    document.querySelector("#resultado").hidden = false;
+  }
 }
 
 botones.forEach((boton, posicion) => {
@@ -80,3 +85,11 @@ siguiente.addEventListener("click", () => {
 });
 
 mostrarTiro();
+document.querySelector("#reiniciar").addEventListener("click", () => {
+  indice = 0;
+  goles = 0;
+  document.querySelector("#goles").textContent = goles;
+  document.querySelector("#resultado").hidden = true;
+  mostrarTiro();
+  botones[0].focus();
+});
