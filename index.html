@@ -4,9 +4,28 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Penales con Patrones</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <h1>Penales con Patrones</h1>
-  <p>Descubre el siguiente número de cada sucesión. Tienes cinco tiros para marcar goles.</p>
+  <main>
+    <h1>Penales con Patrones</h1>
+    <p>Descubre el siguiente número y elige dónde tirar. Cada acierto vale un gol.</p>
+
+    <div class="marcador">
+      <span>Tiro <strong id="tiro">1</strong> de 5</span>
+      <span>Goles: <strong id="goles">0</strong></span>
+    </div>
+
+    <section class="cancha" aria-labelledby="pregunta">
+      <h2 id="pregunta">¿Qué número sigue?</h2>
+      <p id="sucesion">3, 6, 12, 24, ___</p>
+
+      <div class="arco">
+        <button type="button">27</button>
+        <button type="button">36</button>
+        <button type="button">48</button>
+      </div>
+    </section>
+  </main>
 </body>
 </html>
